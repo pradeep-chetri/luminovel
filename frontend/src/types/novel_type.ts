@@ -23,7 +23,7 @@ export interface Novel {
   genre: NovelGenre;
   status: NovelStatus;
   cover: string;
-  rating?: number;
+  rating: number;
   views?: number;
   chapters?: number;
   tags: string[];

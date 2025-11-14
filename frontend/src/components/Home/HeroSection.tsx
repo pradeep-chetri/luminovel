@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Star } from "lucide-react";
 import Image from "next/image";
+import { Novel } from "@/types/novel_type";
 
 const featuredNovels = [
   {
@@ -50,7 +51,7 @@ const featuredNovels = [
   },
 ];
 
-export default function HeroSection() {
+export default function HeroSection(featuredNovels : Novel[]) {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "center",
@@ -83,7 +84,7 @@ export default function HeroSection() {
                     <div className="relative w-full md:w-1/2 h-80 md:h-120 rounded-2xl overflow-hidden">
                       <Image
                         src={
-                          novel.image ||
+                          novel.cover ||
                           "/placeholder.svg?height=400&width=300&query=novel cover"
                         }
                         fill
@@ -107,7 +108,7 @@ export default function HeroSection() {
 
                         {/* Summary */}
                         <p className="text-muted-foreground dark:text-muted-foreground/85 text-sm md:text-base leading-relaxed mb-5">
-                          {novel.summary}
+                          {novel.description}
                         </p>
 
                         {/* Rating */}
