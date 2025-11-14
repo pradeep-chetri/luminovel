@@ -1,24 +1,7 @@
 "use client";
 
-const genres = [
-  "Fantasy",
-  "Romance",
-  "Adventure",
-  "Action",
-  "Sci-Fi",
-  "Mystery",
-  "Drama",
-  "Eastern",
-  "Comedy",
-  "Historical",
-  "Thriller",
-  "Slice of Life",
-  "Magic",
-  "Supernatural",
-  "Horror",
-];
 
-export default function TopGenreTags() {
+export default function TopGenreTags(genres: string[]) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
