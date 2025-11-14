@@ -1,51 +1,10 @@
 "use client";
 
 import Image from "next/image";
+import { Novel } from "@/types/novel_type";
 
-const completedNovels = [
-  {
-    title: "The Silent Crown",
-    genre: "Drama",
-    cover: "/novels/completed/completed_1.png",
-  },
-  {
-    title: "Empire of Ashes",
-    genre: "Action",
-    cover: "/novels/completed/completed_2.png",
-  },
-  {
-    title: "The Whispering Stars",
-    genre: "Fantasy",
-    cover: "/novels/completed/completed_3.png",
-  },
-  {
-    title: "The Silver Sonata",
-    genre: "Fantasy",
-    cover: "/novels/completed/completed_4.png",
-  },
-  {
-    title: "Garden of Forgotten Dreams",
-    genre: "Fantasy",
-    cover: "/novels/completed/completed_5.png",
-  },
-  {
-    title: "Threads of Time",
-    genre: "Romance",
-    cover: "/novels/completed/completed_6.png",
-  },
-  {
-    title: "Echoes of Eternity",
-    genre: "Mystery",
-    cover: "/novels/completed/completed_7.png",
-  },
-  {
-    title: "Crimson Oath: Bloodbound",
-    genre: "Fantasy",
-    cover: "/novels/completed/completed_8.png",
-  },
-];
 
-export default function CompletedSection() {
+export default function CompletedSection(completedNovels: Novel[]) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
