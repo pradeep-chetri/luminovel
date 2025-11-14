@@ -1,51 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { Novel } from "@/types/novel_type";
 
-const weeklyFeatured = [
-  {
-    title: "Reincarnated As A Lion In Another World",
-    genre: "Fantasy",
-    image: "/novels/weekly/reincarnated_lion.jpg",
-  },
-  {
-    title: "Forced to Be a Villain",
-    genre: "Eastern",
-    image: "/novels/weekly/villain.jpg",
-  },
-  {
-    title: "Rivers of the Night",
-    genre: "Eastern",
-    image: "/novels/weekly/rivers_night.jpg",
-  },
-  {
-    title: "Floating Islands: SSS",
-    genre: "Fantasy",
-    image: "/novels/weekly/floating_islands.jpg",
-  },
-  {
-    title: "Strongest Necromancer System",
-    genre: "Fantasy",
-    image: "/novels/weekly/necromancer.jpg",
-  },
-  {
-    title: "Werewolf Leveling in the Apocalypse",
-    genre: "Fantasy",
-    image: "/novels/weekly/werewolf.jpg",
-  },
-  {
-    title: "Online Game: Low Level Hero",
-    genre: "Games",
-    image: "/novels/weekly/online_game.jpg",
-  },
-  {
-    title: "Goblin Dependency",
-    genre: "Fantasy",
-    image: "/novels/weekly/goblin_dependency.jpg",
-  },
-];
-
-export default function WeeklyFeatured() {
+export default function WeeklyFeatured(weeklyFeatured: Novel[]) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
