@@ -1,4 +1,3 @@
-
 # 🌙 LuminaNovel
 
 A modern full-stack platform for reading and publishing novels online — featuring a **Next.js (TypeScript)** frontend and a **FastAPI** backend. Built for performance, clarity, and scalability.
@@ -8,7 +7,6 @@ A modern full-stack platform for reading and publishing novels online — featur
 ## 🚀 Tech Stack
 
 ### Frontend
-
 
 * **Framework:** Next.js (App Router, TypeScript)
 * **Styling:** Tailwind CSS + ShadCN UI
@@ -21,6 +19,7 @@ A modern full-stack platform for reading and publishing novels online — featur
 * **ORM:** SQLAlchemy + Alembic
 * **Database:** SQLite (dev), PostgreSQL (prod)
 * **Auth:** JWT-based authentication
+* **Environment Manager:** uv (modern Python workflow)
 * **Testing:** Pytest + HTTPX TestClient
 
 ---
@@ -68,23 +67,21 @@ Frontend runs at **[http://localhost:3000](http://localhost:3000)**.
 
 ## 🛠️ Backend Setup
 
-### 1. Create virtual environment
+### 1. Create virtual environment with uv
 
 ```bash
 cd backend
 uv venv .venv
-source .venv/bin/activate  # or `.venv\Scripts\activate` on Windows
+source .venv/bin/activate  # or `.venv\\Scripts\\activate` on Windows
 ```
 
-### 2. Install dependencies
+### 2. Install dependencies (uv modern sync)
 
 ```bash
 uv sync
 ```
 
 ### 3. Setup environment variables
-
-Copy and modify the example file:
 
 ```bash
 cp .env.example .env
@@ -108,7 +105,7 @@ Backend runs at **[http://localhost:8000](http://localhost:8000)**.
 
 ## 🧪 Testing
 
-Run all backend tests with:
+Run backend tests with:
 
 ```bash
 pytest --maxfail=1 --disable-warnings -q
@@ -127,9 +124,9 @@ Once running, explore:
 
 ## 🧩 Developer Notes
 
-* Use **Bun or pnpm** for frontend speed.
-* Use **uv or pip** for backend isolation.
-* Commit early, commit often — prefer feature branches.
+* Prefer **Bun or pnpm** for frontend speed.
+* Prefer **uv** instead of pip — modern, faster, and cleaner.
+* Commit early, commit often — use feature branches.
 
 ---
 
