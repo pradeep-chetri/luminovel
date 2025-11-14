@@ -24,8 +24,8 @@ export interface Novel {
   status: NovelStatus;
   cover: string;
   rating: number;
-  views?: number;
-  chapters?: number;
+  views: number;
+  chapters: number;
   tags: string[];
   description?: string;
   releaseDate?: string;
