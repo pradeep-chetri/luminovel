@@ -1,41 +1,9 @@
 "use client";
 
 import Image from "next/image";
+import { Novel } from "@/types/novel_type";
 
-const trendingNovels = [
-  {
-    title: "Crimson Oath: Bloodbound",
-    genre: "Fantasy",
-    cover: "/novels/trending/trending_1.png",
-  },
-  {
-    title: "Shattered Code",
-    genre: "Sci-Fi",
-    cover: "/novels/trending/trending_2.png",
-  },
-  {
-    title: "The Blossoming Veil",
-    genre: "Romance",
-    cover: "/novels/trending/trending_3.png",
-  },
-  {
-    title: "Empire of Ashes",
-    genre: "Action",
-    cover: "/novels/trending/trending_4.png",
-  },
-  {
-    title: "Echoes of Eternity",
-    genre: "Mystery",
-    cover: "/novels/trending/trending_5.png",
-  },
-  {
-    title: "Chronicles of the Depths",
-    genre: "Adventure",
-    cover: "/novels/trending/trending_6.png",
-  },
-];
-
-export default function TrendingSection() {
+export default function TrendingSection(trendingNovels: Novel[]) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
