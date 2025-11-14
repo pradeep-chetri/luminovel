@@ -4,83 +4,9 @@ import { useState } from "react";
 import Image from "next/image";
 import { motion, AnimatePresence } from "framer-motion";
 import { Star } from "lucide-react";
+import { Novel } from "@/types/novel_type";
 
-const novels = [
-  {
-    title: "The Garden of Starlight",
-    author: "Luna Virelle",
-    rating: 4.5,
-    genre: "Fantasy",
-    image: "/novels/new/garden_of_starlight.png",
-    description:
-      "When stars fall like petals, a young botanist discovers a secret garden where constellations bloom — and destinies intertwine.",
-  },
-  {
-    title: "Threads of Fate",
-    author: "Ren Saito",
-    genre: "Drama",
-    rating: 4.5,
-    image: "/novels/new/threads_of_fate.png",
-    description:
-      "A seamstress finds she can stitch memories into fabric, altering lives and rewriting love stories — one seam at a time.",
-  },
-  {
-    title: "The Last Lullaby",
-    author: "Clara Noveen",
-    genre: "Mystery",
-    rating: 4.5,
-    image: "/novels/new/last_lullaby.png",
-    description:
-      "A musician haunted by forgotten melodies uncovers a tragic conspiracy that spans lifetimes.",
-  },
-  {
-    title: "Moonlit Empire",
-    author: "Darius Vale",
-    genre: "Action",
-    rating: 4.5,
-    image: "/novels/new/moonlit_empire.png",
-    description:
-      "A warrior reborn under a cursed moon seeks vengeance in a kingdom that no longer remembers his name.",
-  },
-  {
-    title: "Whispered Horizons",
-    author: "Alyssa K. Moran",
-    genre: "Fantasy",
-    rating: 4.5,
-    image: "/novels/new/whispered_horizons.png",
-    description:
-      "When the winds carry forgotten prayers, a wanderer sets out to uncover the gods who stopped listening.",
-  },
-  {
-    title: "Eclipsed Hearts",
-    author: "Mira Solen",
-    genre: "Romance",
-    rating: 4.5,
-    image: "/novels/new/eclipsed_hearts.png",
-    description:
-      "Two souls tethered by time meet across eclipses, each encounter changing the course of fate itself.",
-  },
-  {
-    title: "Shadows Between Pages",
-    author: "Iris Vayne",
-    genre: "Mystery",
-    rating: 4.5,
-    image: "/novels/new/shadows_between_pages.png",
-    description:
-      "A librarian unearths books that rewrite themselves at midnight — and a story that mirrors her own life.",
-  },
-  {
-    title: "Kingdom of Glass",
-    author: "Kara Ellis",
-    genre: "Drama",
-    rating: 4.5,
-    image: "/novels/new/kingdom_of_glass.png",
-    description:
-      "In a city of fragile towers, a glasswright dreams of building something that will never shatter — even when love does.",
-  },
-];
-
-export default function NewArrivalsSection() {
+export default function NewArrivalsSection(novels: Novel[]) {
   const [selected, setSelected] = useState(novels[0]);
 
   return (
