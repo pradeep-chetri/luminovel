@@ -6,12 +6,12 @@ import { Card } from "@/components/ui/card";
 import { NovelGenre, NovelStatus } from "@/types/novel_type";
 
 interface BrowseFiltersProps {
-  genres: (NovelGenre | "All")[];
-  statuses: (NovelStatus | "All")[];
-  selectedGenre: NovelGenre | "All";
-  setSelectedGenre: (genre: NovelGenre | "All") => void;
-  selectedStatus: NovelStatus | "All";
-  setSelectedStatus: (status: NovelStatus | "All") => void;
+  genres: NovelGenre[] | string[];
+  statuses: NovelStatus[] | string[];
+  selectedGenre: NovelGenre | string;
+  setSelectedGenre: (genre: NovelGenre | string) => void;
+  selectedStatus: NovelStatus | string;
+  setSelectedStatus: (status: NovelStatus | string) => void;
   sortBy: "rating" | "views" | "chapters" | "name";
   setSortBy: (sort: "rating" | "views" | "chapters" | "name") => void;
   onClear: () => void;
@@ -30,28 +30,8 @@ export function BrowseFilters({
   onClear,
   showClear,
 }: BrowseFiltersProps) {
-  // safe setters without spreading the union types everywhere
-  const handleGenreClick = (g: NovelGenre | "All") => {
-    if (g !== selectedGenre) setSelectedGenre(g);
-  };
-
-  const handleStatusClick = (s: NovelStatus | "All") => {
-    if (s !== selectedStatus) setSelectedStatus(s);
-  };
-
-  const handleSortChange = (
-    value: string,
-  ): "rating" | "views" | "chapters" | "name" => {
-    if (value === "rating" || value === "views" || value === "chapters" || value === "name") {
-      return value;
-    }
-    return "rating"; // fallback safety
-  };
-
   return (
     <Card className="p-6 sticky top-20 w-70 max-h-350">
-      {/* ---------- UI UNTOUCHED BELOW ---------- */}
-
       <div className="flex items-center gap-2 mb-6">
         <Filter className="w-5 h-5" />
         <h2 className="font-bold">Filters</h2>
@@ -64,7 +44,7 @@ export function BrowseFilters({
           {genres.map((genre) => (
             <button
               key={genre}
-              onClick={() => handleGenreClick(genre)}
+              onClick={() => setSelectedGenre(genre)}
               className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition ${
                 selectedGenre === genre
                   ? "bg-primary text-primary-foreground"
@@ -84,7 +64,7 @@ export function BrowseFilters({
           {statuses.map((status) => (
             <button
               key={status}
-              onClick={() => handleStatusClick(status)}
+              onClick={() => setSelectedStatus(status)}
               className={`block w-full text-left px-3 py-2 rounded-lg text-sm transition ${
                 selectedStatus === status
                   ? "bg-primary text-primary-foreground"
@@ -102,7 +82,11 @@ export function BrowseFilters({
         <h3 className="font-semibold text-sm mb-3">Sort By</h3>
         <select
           value={sortBy}
-          onChange={(e) => setSortBy(handleSortChange(e.target.value))}
+          onChange={(e) =>
+            setSortBy(
+              e.target.value as "rating" | "views" | "chapters" | "name",
+            )
+          }
           className="w-full px-3 py-2 rounded-lg border border-input bg-card text-foreground text-sm focus:outline-none focus:ring-2 focus:ring-ring"
         >
           <option value="rating">Highest Rated</option>
