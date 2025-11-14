@@ -9,6 +9,7 @@ A modern full-stack platform for reading and publishing novels online — featur
 
 ### Frontend
 
+
 * **Framework:** Next.js (App Router, TypeScript)
 * **Styling:** Tailwind CSS + ShadCN UI
 * **Package Manager:** Bun or pnpm
@@ -16,7 +17,7 @@ A modern full-stack platform for reading and publishing novels online — featur
 
 ### Backend
 
-* **Framework:** FastAPI (Python 3.12+)
+* **Framework:** FastAPI (Python 3.13+)
 * **ORM:** SQLAlchemy + Alembic
 * **Database:** SQLite (dev), PostgreSQL (prod)
 * **Auth:** JWT-based authentication
@@ -78,7 +79,7 @@ source .venv/bin/activate  # or `.venv\Scripts\activate` on Windows
 ### 2. Install dependencies
 
 ```bash
-uv pip install -e .
+uv sync
 ```
 
 ### 3. Setup environment variables
