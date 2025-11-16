@@ -39,27 +39,27 @@ def create_access_token(data: dict, expires_minutes: int = 60) -> str:
     )
 
 
-# def decode_token(token: str) -> dict:
-#     return jwt.decode(
-#         token,
-#         settings.jwt_secret,
-#         algorithms=[settings.jwt_algo]
-#     )
+def decode_token(token: str) -> dict:
+    return jwt.decode(
+        token,
+        settings.jwt_secret,
+        algorithms=[settings.jwt_algo]
+    )
 
 
-# def get_current_user(
-#         token: str = Depends(oauth2_scheme),
-#         db: Session = Depends(get_db)
-# ):
-#     try:
-#         payload = decode_token(token)
-#         user_id = payload.get("sub")
-#         if not user_id:
-#             raise HTTPException(status_code=401, detail="Invaild Token")
-#     except JWTError:
-#         raise HTTPException(status_code=401, detail="Invaild Token")
+def get_current_user(
+        token: str = Depends(oauth2_scheme),
+        db: Session = Depends(get_db)
+):
+    try:
+        payload = decode_token(token)
+        user_id = payload.get("sub")
+        if not user_id:
+            raise HTTPException(status_code=401, detail="Invaild Token")
+    except JWTError:
+        raise HTTPException(status_code=401, detail="Invaild Token")
 
-#     user = db.query(User).filter(User.id == user_id).first()
-#     if not user:
-#         raise HTTPException(status_code=401, detail="User Not Found")
-#     return user
+    user = db.query(User).filter(User.id == user_id).first()
+    if not user:
+        raise HTTPException(status_code=401, detail="User Not Found")
+    return user
