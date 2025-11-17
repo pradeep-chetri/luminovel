@@ -1,5 +1,5 @@
-// RankList.tsx
 "use client";
+
 import { Novel } from "@/types/novel_type";
 import RankCard from "./RankCard";
 import { genres } from "@/lib/novels";
