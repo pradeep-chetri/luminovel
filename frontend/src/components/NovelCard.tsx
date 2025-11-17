@@ -12,6 +12,7 @@ interface NovelCardProps {
   showDescription?: boolean;
 }
 
+
 export function NovelCard({
   novel,
   isLiked,
