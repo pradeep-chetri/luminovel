@@ -1,5 +1,5 @@
-// RankCard.tsx
 "use client";
+
 import Link from "next/link";
 import { Card } from "@/components/ui/card";
 import { Star } from "lucide-react";
