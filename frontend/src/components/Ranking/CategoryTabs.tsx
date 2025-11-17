@@ -1,4 +1,5 @@
 "use client";
+
 import { genres } from "@/lib/novels";
 
 const RankingTabs = [
