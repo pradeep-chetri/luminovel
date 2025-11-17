@@ -1,4 +1,5 @@
 "use client";
+
 import { useState } from "react";
 import CategoryTabs from "./CategoryTabs";
 import RankList from "./RankList";
