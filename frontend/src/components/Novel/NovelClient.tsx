@@ -16,7 +16,7 @@ import type { Novel } from "@/types/novel_type";
 import Image from "next/image";
 import { useState } from "react";
 
-// outside your component = pure ✅
+
 const chapters = Array.from({ length: 10 }).map((_, i) => ({
   id: i + 1,
   title: `Chapter ${i + 1}: ${
