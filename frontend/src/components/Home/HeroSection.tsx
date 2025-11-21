@@ -12,51 +12,52 @@ const featuredNovels = [
   {
     title: "The Whispering Stars",
     author: "Alyssa K. Moran",
-    summary:
+    description:
       "In a tranquil kingdom where the stars are believed to be silent watchers of fate, young astronomer Elara discovers she can hear their whispers — faint voices echoing through her telescope. As she learns to interpret their celestial language, the constellations reveal ominous prophecies of a coming darkness that threatens to swallow her world. Torn between loyalty to her king and the cosmic truths written in the heavens, Elara must choose whether to warn her people or risk being branded a heretic in a realm that no longer believes in magic.",
     rating: 4.8,
-    image: "/novels/hero-section/novel_1.png",
+    cover: "/novels/hero-section/novel_1.png",
   },
   {
     title: "Chronicles of Emberfall",
     author: "Darius Vale",
-    summary:
+    description:
       "In the ashes of a kingdom that outlawed fire magic centuries ago, a young blacksmith’s apprentice named Kael discovers an ember burning within his soul. When his secret gift flares to life, he becomes the spark of rebellion against a regime built on fear and silence. Hunted by inquisitors and haunted by visions of a world consumed by flame, Kael must decide whether to embrace his dangerous power — or let it die before it consumes everything he loves.",
     rating: 4.6,
-    image: "/novels/hero-section/novel_2.png",
+    cover: "/novels/hero-section/novel_2.png",
   },
   {
     title: "The Silver Sonata",
     author: "Clara Noveen",
-    summary:
+    description:
       "In a quiet seaside town where music holds the power to shape memories, a melancholic musician named Elara discovers a haunting melody that bends the flow of time. Each time she plays it, reality shifts — lost loves return, futures unravel, and her fate rewrites itself note by note. As the song’s echoes grow stronger, Elara must uncover who composed it and why it seems to remember her better than she remembers herself — before the final refrain traps her forever within its sorrowful tune.",
     rating: 4.9,
-    image: "/novels/hero-section/novel_3.png",
+    cover: "/novels/hero-section/novel_3.png",
   },
   {
     title: "Garden of Forgotten Dreams",
     author: "Ren Saito",
-    summary:
+    description:
       "A young artist discovers a hidden garden where every dream forgotten by the world takes form — but each visit comes at a price.",
     rating: 4.7,
-    image: "/novels/hero-section/novel_4.png",
+    cover: "/novels/hero-section/novel_4.png",
   },
   {
     title: "The Last Eclipse",
     author: "Mira Solen",
-    summary:
+    description:
       "As the sun begins to die, a girl blessed by the moon must journey across shattered kingdoms to reignite the light of creation.",
     rating: 4.9,
-    image: "/novels/hero-section/novel_5.png",
+    cover: "/novels/hero-section/novel_5.png",
   },
 ];
 
-export default function HeroSection(featuredNovels : Novel[]) {
+export default function HeroSection() {
   const [emblaRef, emblaApi] = useEmblaCarousel({
     loop: true,
     align: "center",
   });
   const [activeIndex, setActiveIndex] = useState(0);
+
 
   const onSelect = useCallback(() => {
     if (!emblaApi) return;
