@@ -767,3 +767,91 @@ export const weeklyDATA: WeeklyData[] = [
     genre: "Drama",
   },
 ]
+
+export const NewArrivals: Novel[] = [
+  {
+    id: 1,
+    title: "Moonlit Dreams",
+    author: "Luna West",
+    cover: "/novels/hero-section/novel_1.png",
+    rating: 4.8,
+    votes: 2412,
+    chapters: 156,
+    views: 2.4,
+    genre: "Fantasy",
+    status: "Ongoing",
+    tags: ["Magic", "Kingdom", "Dreams"],
+    description:
+      "In a world where dreams hold magical power, a young woman discovers she can enter the dreams of others and must use this ability to save her kingdom from a dark force.",
+    longDescription:
+      "As the lines between dreams and reality blur, Luna must face not only the monsters that haunt her sleep but also the dark truths that threaten to unravel her world.",
+  },
+  {
+    id: 2,
+    title: "Ethereal Chronicles",
+    author: "Aria Moon",
+    cover: "/novels/hero-section/novel_2.png",
+    rating: 4.6,
+    votes: 3100,
+    chapters: 203,
+    views: 3.1,
+    genre: "Adventure",
+    status: "Ongoing",
+    tags: ["Epic", "Adventure", "Magic"],
+    description:
+      "A young adventurer embarks on a quest to find the legendary Ethereal Chronicles, a book said to hold the power to control the elements and save the world from destruction.",
+    longDescription:
+      "With the fate of the world hanging in the balance, Aria must navigate treacherous lands and forge alliances to unlock the secrets of the Ethereal Chronicles and restore harmony to the elements.",
+  },
+  {
+    id: 3,
+    title: "The Whispering Stars",
+    author: "Alyssa K. Moran",
+    cover: "/novels/hero-section/novel_1.png",
+    rating: 4.8,
+    votes: 3100,
+    chapters: 203,
+    views: 3.1,
+    genre: "Adventure",
+    status: "Ongoing",
+    tags: ["Epic", "Adventure", "Magic"],
+    description:
+      "In a tranquil kingdom where the stars are believed to be silent watchers of fate, young astronomer Elara discovers she can hear their whispers — faint voices echoing through her telescope. As she learns to interpret their celestial language, the constellations reveal ominous prophecies of a coming darkness that threatens to swallow her world. Torn between loyalty to her king and the cosmic truths written in the heavens, Elara must choose whether to warn her people or risk being branded a heretic in a realm that no longer believes in magic.",
+    longDescription:
+      "Elara's journey takes her from the quiet observatory to the heart of a cosmic battle, where she must confront not only the dark forces threatening her world but also the personal demons that haunt her past.",
+  },
+  {
+    id: 4,
+    title: "Chronicles of Emberfall",
+    author: "Darius Vale",
+    cover: "/novels/hero-section/novel_2.png",
+    rating: 4.6,
+    votes: 8450,
+    chapters: 95,
+    views: 84.5,
+    genre: "Fantasy",
+    status: "Ongoing",
+    tags: ["Fantasy", "Rebellion", "Magic"],
+    description:
+      "In a world where magic is forbidden, a group of rebels fights to restore the ancient magic and overthrow the tyrannical king.",
+    longDescription:
+      "As the rebels gain strength, they uncover ancient secrets and forge alliances that could turn the tide of the rebellion and restore magic to the world.",
+  },
+  {
+    id: 5,
+    title: "The Silver Sonata",
+    author: "Clara Noveen",
+    cover: "/novels/hero-section/novel_3.png",
+    rating: 4.9,
+    votes: 9920,
+    chapters: 78,
+    views: 99.2,
+    genre: "Drama",
+    status: "Completed",
+    tags: ["Drama", "Romance", "Music"],
+    description:
+      "A young musician discovers a magical instrument that can bring her lost love back to life, but at a terrible cost.",
+    longDescription:
+      "As Clara delves deeper into the mysteries of the magical instrument, she must confront the consequences of her actions and decide whether the love she seeks is worth the price she must pay.",
+  },
+]

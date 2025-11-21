@@ -6,7 +6,11 @@ import { motion, AnimatePresence } from "framer-motion";
 import { Star } from "lucide-react";
 import { Novel } from "@/types/novel_type";
 
-export default function NewArrivalsSection(novels: Novel[]) {
+interface NewArrivalProps {
+  novels: Novel[];
+}
+
+export default function NewArrivalsSection({ novels }: NewArrivalProps) {
   const [selected, setSelected] = useState(novels[0]);
 
   return (
