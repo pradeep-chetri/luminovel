@@ -1,10 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Novel } from "@/types/novel_type";
+import { Novel, WeeklyData } from "@/types/novel_type";
 
+interface CompletedNovelProps {
+  completedNovels: WeeklyData[];
+}
 
-export default function CompletedSection(completedNovels: Novel[]) {
+export default function CompletedSection({ completedNovels }: CompletedNovelProps) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
