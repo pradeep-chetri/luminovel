@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Novel } from "@/types/novel_type";
+import { Novel, WeeklyData } from "@/types/novel_type";
 
-export default function TrendingSection(trendingNovels: Novel[]) {
+interface TrendingProps {
+  trendingNovels?: WeeklyData[];
+}
+
+export default function TrendingSection({ trendingNovels = [] }: TrendingProps) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">
@@ -21,7 +25,7 @@ export default function TrendingSection(trendingNovels: Novel[]) {
             >
               <div className="w-full h-[260px] relative rounded-lg overflow-hidden shadow-sm border border-gray-200 dark:border-gray-800">
                 <Image
-                  src={"/novels/hero-section/novel_2.png"}
+                  src={novel.cover || "/novels/hero-section/novel_2.png"}
                   alt={novel.title}
                   fill
                   className="object-cover rounded-lg"

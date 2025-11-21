@@ -12,7 +12,7 @@ export default function Home() {
     <main className="px-30">
       <HeroSection />
       <WeeklySection weeklyFeatured={weeklyDATA}/>
-      <TrendingSection />
+      <TrendingSection trendingNovels={weeklyDATA}/>
       <RankingSection />
       <NewArrivalsSection />
       <CompletedSection />
