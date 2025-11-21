@@ -1,4 +1,4 @@
-import { Novel, NovelGenre, NovelStatus } from "@/types/novel_type";
+import { Novel, NovelGenre, NovelStatus, WeeklyData } from "@/types/novel_type";
 
 export const genres: (NovelGenre | "All")[] = [
   "Fantasy",
@@ -734,3 +734,36 @@ export const novel_detail: Novel[] = [
       "A grand tale of magic and destiny where a young mage must uncover the secrets of an ancient prophecy.",
   },
 ];
+
+export const weeklyDATA: WeeklyData[] = [
+  {
+    id: 1,
+    title: "Moonlit Dreams",
+    cover: "/novels/hero-section/novel_1.png",
+    genre: "Fantasy"
+  },
+  {
+    id: 2,
+    title: "Ethereal Chronicles",
+    cover: "/novels/hero-section/novel_2.png",
+    genre: "Adventure"
+  },
+  {
+    id: 3,
+    title: "The Whispering Stars",
+    cover: "/novels/hero-section/novel_1.png",
+    genre: "Adventure",
+  },
+  {
+    id: 4,
+    title: "Chronicles of Emberfall",
+    cover: "/novels/hero-section/novel_2.png",
+    genre: "Fantasy",
+  },
+  {
+    id: 5,
+    title: "The Silver Sonata",
+    cover: "/novels/hero-section/novel_3.png",
+    genre: "Drama",
+  },
+]

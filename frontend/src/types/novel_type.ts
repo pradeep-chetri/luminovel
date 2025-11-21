@@ -33,3 +33,10 @@ export interface Novel {
   longDescription?: string;
   votes?: number;
 }
+
+export interface WeeklyData {
+  id: number;
+  title: string;
+  genre: NovelGenre;
+  cover: string;
+}
