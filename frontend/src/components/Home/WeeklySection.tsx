@@ -1,9 +1,13 @@
 "use client";
 
 import Image from "next/image";
-import { Novel } from "@/types/novel_type";
+import { Novel, WeeklyData } from "@/types/novel_type";
 
-export default function WeeklyFeatured(weeklyFeatured: Novel[]) {
+interface WeeklyFeaturedProps {
+  weeklyFeatured: WeeklyData[];
+}
+
+export default function WeeklyFeatured({ weeklyFeatured }: WeeklyFeaturedProps) {
   return (
     <section className="w-full py-12 transition-colors duration-500">
       <div className="max-w-8xl mx-auto">

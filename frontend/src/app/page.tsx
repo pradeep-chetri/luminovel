@@ -5,13 +5,13 @@ import RankingSection from "@/components/Home/RankingSection";
 import TopGenreTags from "@/components/Home/TopGenreTags";
 import TrendingSection from "@/components/Home/TrendingSection";
 import WeeklySection from "@/components/Home/WeeklySection";
+import { weeklyDATA } from "@/lib/novels";
 
 export default function Home() {
   return (
     <main className="px-30">
       <HeroSection />
-      <WeeklySection />
-      <TopGenreTags />
+      <WeeklySection weeklyFeatured={weeklyDATA}/>
       <TrendingSection />
       <RankingSection />
       <NewArrivalsSection />
